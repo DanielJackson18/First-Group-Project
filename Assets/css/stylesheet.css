@@ -1,0 +1,140 @@
+/* Body */
+body{ 
+    font: 'open sans',sans-serief;
+    font-size: 16px;
+    font-weight: 300;
+    background-color:#eee9d9;
+    color:#000000;
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+#header{
+    background-color: #cf0004;
+    color:#ffffff;
+    height: 130px;
+}
+#logoDiv{
+    float:left;
+    width:25%;
+}
+
+#navDiv{
+    float: right;;
+    width:75%;
+    padding: 20px;
+}
+
+#logo{
+    width:200px;
+    height:100px;
+    margin:15px;
+}
+
+/* Main Container */
+#mainContainer{
+    margin:20px;
+}
+#main{
+    margin-top:20px;
+    margin-bottom: 20px;
+    font-size: 1em;
+
+}
+  /* Nav */
+nav {
+	float: right;
+	margin-top: 25px;
+  }
+nav a {
+    font-size: 1em;
+    font-weight: 2000;
+	margin-left: 15px;
+	padding-left: 15px;
+	color: #ffffff;
+	text-decoration: none;
+    line-height: 18px;
+    width: 180px;
+    display: table-cell;
+    margin-right: 15px;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 14px;
+  }
+nav a:visited{
+    color:#fff;
+}
+nav a:hover{
+    background-color:#6d0911;
+}
+
+
+/* Form */
+  input[type=text], select, textarea {
+    width: 75%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color:  #cf0004;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: left;
+  }
+  
+  input[type=submit]:hover {
+    background-color:#6d0911;;
+  }
+
+/* Footer */
+#footer{
+    clear:both;
+    background-color: #cf0004;
+    color:#ffffff;
+    height: 100px;
+    text-align: right;
+    padding-left:80%;
+    padding-top:30px;
+}
+
+/*About us Image */
+.image{
+    width: 400px;
+	height: auto;
+	margin-top: 10px;
+	margin-right: 25px;
+	float: left;
+}
+/* Contact us  */
+#googlemapIcon{
+    width: 200px;
+	height: auto;
+}
+#adressHolder{
+    margin-top: 30px
+}
+#googleIcon{
+    width:50%;
+    float:left;
+}
+#googleIcon{
+    width:50%;
+    float:left;
+}
+#adressDescription{
+    width:50%;
+    float:left;
+    margin-top: 40px;
+}
