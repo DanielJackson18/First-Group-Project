@@ -1,4 +1,5 @@
-// $(document).on('click', "#googlemapIcon", function(){
+
+// CONTACT PAGE $(document).on('click', "#googlemapIcon", function(){
     $("#googlemapIcon").on('click',function(){
         $('#map').show();
       })
@@ -12,3 +13,4 @@
           }    
 //     var googlemapicon.
 // })
+
