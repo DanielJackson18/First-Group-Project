@@ -1,23 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
+<!---------------  //  Developer log *Page 4  //  ----------------->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Assignment Tracking System</title>
 
+
+
+<!--Style sheet CSS/Bootstrap-->
+    <link rel="stylesheet" type="text/css" href="Assets/css/stylesheet.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
-    <link rel="stylesheet" type="text/css" href="Assets/css/stylesheet.css">
-
 </head>
 
-<body>
 
+
+<!--------------------------------  Nav Bar  ------------------------------>
+<body>
     <div class="container-fluid" id="header">
         <div class="row">
 
@@ -44,7 +48,27 @@
         </div>
     </div>
     
-    <div class="container-fluid" id="mainContainer">
+
+<!---Task Manager-->
+    <div id= "contentWrapper">
+        <article id="mainContent">
+            <h1>Task Manager</h1>
+            <article class="post">
+                <h2><a href="#">assign, edit, delete, and store tasks</a></h2>
+                
+            </article>
+            <div id = "container">
+                <form name="form1" method="post" action="">
+                    <input type="text" name="toDoItem" id="toDoItem" autofocus>
+                    <input type= "button" name= "addToDo" id="addToDo" value="add list item">
+                </form>
+                <ul id="the list"  class= "sortable list">
+                </ul>
+                <p id="doClearAll"><a id="clearAll" href="javascript:void();">Clear All</a></p>
+            </div>
+        
+<!----------------------------------  Footer  ------------------------------->
+<div class="container-fluid" id="mainContainer">
         <div class="row">
             <div class="col-6">
            
@@ -55,13 +79,17 @@
     <div class="container-fluid" id="footer">
             <div class="row">
             <footer>
+                <div id="footercontent"><!--div to center the footer content START-->
                 &copy;proodos Assignment Tracking Team
                 <div class="content">
                 <a rel="Privacy Policy" href="#">Privacy policy</a>
                 <a rel="Terms of Use" href="#">Terms of Use</a>
+                </div><!--div to center the footer content END-->
             </footer>
             </div>
-    </div>
+
+    <script src="ajax.googleleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>        
+<!---javascript--->
     <script type="text/javascript" src="Assets/javascrpt/main.js"></script>
 </body>
 </html>
