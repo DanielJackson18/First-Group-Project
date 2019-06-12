@@ -1,5 +1,5 @@
 
-  // Firebase API//
+
   
 
 
@@ -30,6 +30,7 @@
         compactResults: false
       }
     }).addTo(map);
+
   }
   
   
@@ -178,6 +179,7 @@ function loadToDo(){
 
   
   
+
 
 
 

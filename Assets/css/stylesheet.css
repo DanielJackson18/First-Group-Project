@@ -1,161 +1,227 @@
-/* Body */
-body{ 
-    font: 'open sans',sans-serief;
-    font-size: 16px;
-    font-weight: 300;
-    background-color:#eee9d9;
-    color:#000000;
-    margin: 0;
-    padding: 0;
+
+
+/*/* Body */
+body{
+ font: 'open sans',sans-serief;
+ font-size: 16px;
+ font-weight: 300;
+ background-color:#eee9d9;
+ color:#000000;
+ margin: 0;
+ padding: 0;
+
+}
+
+
+.jumbocontainer {
+  display: block;
+  background-image: url("https://images.pexels.com/photos/1893485/pexels-photo-1893485.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  align-content: center;
+  height: 1300px;
+  margin: 0;
+  text-align: center;
+  padding-top: 5%;
+  padding-right: 25px;
+
 }
 
 /* Header */
 #header{
-    background-color: #cf0004;
-    color:#ffffff;
-    height: 130px;
+ background-color: #cf0004;
+ color:#ffffff;
+ height: 130px;
+ border-style: solid;
+ border-width: 2px;
+ border-color: #000000;
+ 
 }
 #logoDiv{
-    float:left;
-    width:25%;
+ float:left;
+ width:25%;
 }
 
 #navDiv{
-    float: right;;
-    width:75%;
-    padding: 20px;
+ float: right;;
+ width:75%;
+ padding-bottom: 20px;
+ padding-right: 20px;
+ background-color: rgba(0, 0, 0, 0.123);
+ margin: auto;
+ margin-top: 25px;
+ align-content: center;
+ line-height: 40px;
 }
 
 #logo{
-    width:200px;
-    height:100px;
-    margin:15px;
+ width:200px;
+ height:100px;
+ margin:15px;
+}
+
+/*maincontent*/
+#maincontent {
+ float: center;
+ margin: auto;
+ width: 960px;
+ background:none;
+
 }
 
 /* Main Container */
 #mainContainer{
-    margin:20px;
+ margin:20px;
+ 
 }
 #main{
-    margin-top:20px;
-    margin-bottom: 20px;
-    font-size: 1em;
-
+ margin-top:20px;
+ margin-bottom: 20px;
+ font-size: 1em;
+ width: 80%;
+ 
 }
-  /* Nav */
+
+/*BIGM MAIN LOGO REMOVED#mainImage {
+  margin: auto;
+  float: left;
+  margin-top: 60px;
+  margin-left: 60px;
+  margin-right: 30px;
+  width: 20px;
+ }*/
+
+#transparentbackground {
+  background-color: rgba(0, 0, 0, 0.637);
+  border-style: solid;
+  border-width: 5px;
+  border-color: #cf0004;
+  border-radius: 0%;
+  height: 500px;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding-left: 0%;
+  padding-right: 27%;
+  color: #fff;
+  width: 80%;
+  
+  
+}
+
+
+/* Nav */
 nav {
-	float: right;
-	margin-top: 25px;
-  }
+float: right;
+margin-top: 25px;
+}
 nav a {
-    font-size: 1em;
-    font-weight: 2000;
-	margin-left: 15px;
-	padding-left: 15px;
-	color: #ffffff;
-	text-decoration: none;
-    line-height: 18px;
-    width: 180px;
-    display: table-cell;
-    margin-right: 15px;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 14px;
-  }
+ font-size: 1em;
+ font-weight: 2000;
+margin-left: 15px;
+padding-left: 15px;
+color: #ffffff;
+text-decoration: none;
+ line-height: 18px;
+ width: 180px;
+ display: table-cell;
+ margin-right: 15px;
+ text-align: center;
+ vertical-align: middle;
+ line-height: 14px;
+}
 nav a:visited{
-    color:#fff;
+ color:#fff;
 }
 nav a:hover{
-    background-color:#6d0911;
+ background-color:#6d0911;
 }
 
 
 /* Form */
-  input[type=text], select, textarea {
-    width: 75%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-  }
-  
-  label {
-    padding: 12px 12px 12px 0;
-    display: inline-block;
-  }
-  
-  input[type=submit] {
-    background-color:  #cf0004;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: left;
-  }
-  
-  input[type=submit]:hover {
-    background-color:#6d0911;;
-  }
-
-/* Footer */
-#footer{
-    clear:both;
-    background-color: #cf0004;
-    color:#ffffff;
-    height: 100px;
-    text-align: right;
-    padding-left:80%;
-    padding-top:30px;
+input[type=text], select, textarea {
+ width: 115%;
+ padding: 12px;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+ resize: vertical;
 }
 
-/*About us Image */
-.image{
-    width: 400px;
-	height: auto;
-	margin-top: 10px;
-	margin-right: 25px;
-	float: left;
+label {
+ padding: 12px 12px 12px 0;
+ display: inline-block;
 }
-/* Contact us  */
-#googlemapIcon{
-    width: 200px;
-	height: auto;
+
+input[type=submit] {
+ background-color:  #cf0004;
+ color: white;
+ padding: 12px 20px;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+ float: left;
 }
-#adressHolder{
-    margin-top: 30px
-}
-#googleIcon{
-    width:50%;
-    float:left;
-}
-#googleIcon{
-    width:50%;
-    float:left;
-}
-#adressDescription{
-    width:50%;
-    float:left;
-    margin-top: 40px;
+
+input[type=submit]:hover {
+ background-color:#6d0911;;
 }
 
 /* Footer */
 #footer  {
-  clear:both;
-  background-color: #cf0004;
-  color:#ffffff;
-  height: 100px;
-  padding-top: 30px;
-  margin: auto;
-  position: relative;
-  bottom:0;
-  width:100%;
-  box-sizing: border-box;
-  align-content: center;
-  text-align: center;
-  padding-left: 45%;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #000000;
- 
-} 
+ clear:both;
+ background-color: #cf0004;
+ color:#ffffff;
+ height: 100px;
+ padding-top: 30px;
+ margin: auto;
+ position: relative;
+ bottom:0;
+ width:100%;
+ box-sizing: border-box;
+ align-content: center;
+ text-align: center;
+ padding-left: 45%;
+ border-style: solid;
+ border-width: 2px;
+ border-color: #000000;
+
+
+
+
+}
+
+/*About us Image*/
+.image{
+ width: 400px;
+height: auto;
+margin-top: 10px;
+margin-right: 25px;
+float: left;
+}
+/* Contact us  */
+#googlemapIcon{
+ width: 200px;
+height: auto;
+}
+#adressHolder{
+ margin-top: 30px
+}
+#googleIcon{
+ width:50%;
+ float:left;
+}
+#googleIcon{
+ width:50%;
+ float:left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
