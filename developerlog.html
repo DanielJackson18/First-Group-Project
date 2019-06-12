@@ -19,6 +19,9 @@
 
 <body>
 
+
+
+
     <div class="container-fluid" id="header">
         <div class="row">
 
@@ -27,7 +30,8 @@
                     <img id="logo" alt="logo" src="Assets/image/logo.jpg" >
                 </div>
             </div>
-
+            
+        
             <div class="col-8">
                 <div id="navDiv">
                     <nav>
@@ -45,6 +49,11 @@
         </div>
     </div>
 
+    <div class="wrapper">
+
+
+   
+
     <!--Commented this out becasue not sure if its needed-->
    <!--<div class="container-fluid" id="mainContainer">
         <div class="row">
@@ -57,14 +66,15 @@
     <!--main content-->
     <div id="maincontent">
     
-
-    <div class="container-fluid" id="mainContainer">
+       <!--user input-->
+    <div class="container-fluid" id="userInfoBox">
         <div class="row">
             <div class="col-12">
             </div>    
-                   <div class="col-12" id="main"> 
+                   <div class="col-12" id="userInfo"> 
+                 <div class="userInfoWidth"><!--user info width Start-->
                     <form role="form">
-                    <label for="username">User Name</label><br>
+                    <label for="username">Username</label><br>
                     <input type="text" id="userName" name="firstname"><br>
                     <label for="username">Role</label><br>
                     <input type="text" id="title" name="firstname"><br>
@@ -79,6 +89,7 @@
                     <input type="text" id="phonenumber" name="password"><br><br>
 
                     <input type="submit" id="submit" value="Submit">
+                    </div><!--user info width END-->
                 </form> 
                  </div>
                 </div>
@@ -101,6 +112,8 @@
             </footer>
             </div>
     </div>
+
+</div> <!--WrapperEND-->
     <script type="text/javascript" src="Assets/javascrpt/main.js"></script>
 </body>
 </html>
