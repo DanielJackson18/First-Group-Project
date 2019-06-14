@@ -8,6 +8,9 @@
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -36,7 +39,7 @@
                         <a href="developerlog.html">Developer Log</a>
                         <a href="assignmentreport.html">Assignment Report</a>
                         <a href="generalreport.html">General Reports</a>
-                        <a href="contactus.html">Contact Us</a>
+                        <a href="contactuss.html">Contact Us</a>
                     </nav>
                 </div>   
             </div>
@@ -46,8 +49,59 @@
     
     <div class="container-fluid" id="mainContainer">
         <div class="row">
-            <div class="col-6">
-           
+                <div class="col-sm-6">
+                    <form role="form" id="assignmentEntry">
+                        
+                    <label for="assignmentId">Assignment ID</label><br>
+                    <input type="text" id="assignmentId_input" name="assignmentId"><br>
+
+                    <label for="taskId">Task ID</label><br>
+                    <input type="text" id="taskId_input" name="taskId"><br>
+
+                    <label for="developerId">Developer ID</label><br>
+                    <input type="text" id="developerId_input" name="developerId"><br>
+
+                    <label for="priority">Priority</label><br>
+                    <input type="priority" id="priority_input" name="priority"><br>
+
+                    <label for="taskName">Task Name</label><br>
+                    <input type="taskName" id="taskName_input" name="taskName"><br>
+
+                    <label for="description">Description</label><br>
+                    <input type="description" id="description_input" name="description"><br><br>
+
+                    <input type="submit" id="submitAssignmentLog" value="Submit">
+                </form> 
+               </div> 
+
+               <div class="col-6">
+                    <form role="form">
+                            <label for="assignmentId">Assignment ID</label>
+                            <input type="text" id="assignmentId" name="assignmentId"><br>
+        
+                            <label for="taskId">Task ID</label>
+                            <input type="text" id="taskId" name="taskId"><br>
+
+                            <label for="developerId">Developer ID</label><br>
+                            <input type="text" id="developerId_input" name="developerId"><br>
+        
+                            <!-- <label for="developerId">Assigned To</label>
+                            <select id="developer" name="developer">
+                                    <option value="australia">Mesay</option>
+                                    <option value="canada">Victoria</option>
+                                    <option value="usa">Daniel</option> <br> -->
+
+                                    <!-- <div class="row">
+                                    <div class="col-25">
+                                            <label for="description">Description</label>
+                                          </div>
+
+                                    <div class="col-75">
+                                            <textarea id="description" name="description" placeholder="Discription about the task..." style="height:200px"></textarea>
+                                    </div>
+                                </div> -->
+                        
+                            <input type="submit" id="submit" value="Submit">
             </div> 
         </div>
     </div>
@@ -62,6 +116,6 @@
             </footer>
             </div>
     </div>
-    <script type="text/javascript" src="Assets/javascrpt/main.js"></script>
+    <script type="text/javascript" src="Assets/javascrpt/assignmentlog.js"></script>
 </body>
 </html>

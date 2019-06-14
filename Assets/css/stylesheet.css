@@ -73,7 +73,7 @@ nav a:hover{
 /* Form */
   input[type=text], select, textarea {
     width: 75%;
-    padding: 12px;
+    padding: 5px;
     border: 1px solid #ccc;
     border-radius: 4px;
     resize: vertical;
@@ -137,4 +137,32 @@ nav a:hover{
     width:50%;
     float:left;
     margin-top: 40px;
+}
+
+
+
+#map {
+  height: 100%;
+}
+
+#generalReport{
+border-collapse: collapse;
+  width: 100%;
+}
+
+#generalReport td, #generalReport th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#generalReport tr:nth-child(even){background-color: #f2f2f2;}
+
+#generalReport tr:hover {background-color: #ddd;}
+
+#generalReport th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #cc6633;;
+  color: white;
 }

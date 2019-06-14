@@ -1,16 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Assignment Tracking System</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- Firebase Reference -->
+	<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
 
     <link rel="stylesheet" type="text/css" href="Assets/css/stylesheet.css">
 
@@ -21,9 +29,9 @@
     <div class="container-fluid" id="header">
         <div class="row">
 
-            <div class="col-4">              
+            <div class="col-4">
                 <div id="logoDiv">
-                    <img id="logo" alt="logo" src="Assets/image/logo.jpg" >
+                    <img id="logo" alt="logo" src="Assets/image/logo.jpg">
                 </div>
             </div>
 
@@ -36,46 +44,69 @@
                         <a href="developerlog.html">Developer Log</a>
                         <a href="assignmentreport.html">Assignment Report</a>
                         <a href="generalreport.html">General Reports</a>
-                        <a href="contact.html">Contact Us</a>
+                        <a href="contactus.html">Contact Us</a>
                     </nav>
-                </div>   
+                </div>
             </div>
-                    
+
         </div>
     </div>
-    
+
     <div class="container-fluid" id="mainContainer">
         <div class="row">
             <div class="col-6">
-            </div>    
-                   
-            <div class="col-6" id="main"> 
-                
+            </div>
+
+            <div class="col-6" id="main">
+                <div id="loginDiv">
                 <form role="form">
                     <label for="username">User Name</label><br>
-                    <input type="text" id="userName" name="firstname"><br>
+                    <input type="text" id="userName" name="firstname" placeholder="email"><br>
 
                     <label for="password">Password</label><br>
-                    <input type="text" id="password" name="password"><br><br>
+                    <input type="text" id="password" name="password" placeholder="password"><br><br>
 
-                    <input type="submit" id="submit" value="Submit">
-                </form> 
+                    <button id="submit" onclick="login()">Login</button>
+                </form>
                 </div>
+
+                <div id="userDiv"> 
+                    <button>LogOut</button>
+                </div>
+
+                <!-- <label> Enter your favorite movies:<br />
+                    <input type="text" name="movies" list="movies" />
+                    <datalist id="movies">
+
+                        <label> or select one from the list:
+                            <select name="movies">
+                                <option value="S">
+                                <option value="The Godfather">
+                                <option value="Goodfellas">
+                            </select>
+                        </label> -->
+<!-- 
+                    </datalist>
+                </label> -->
+
+
             </div>
-            
         </div>
+
+    </div>
     </div>
 
     <div class="container-fluid" id="footer">
-            <div class="row">
+        <div class="row">
             <footer>
                 &copy;proodos Assignment Tracking Team
                 <div class="content">
-                <a rel="Privacy Policy" href="#">Privacy policy</a>
-                <a rel="Terms of Use" href="#">Terms of Use</a>
+                    <a rel="Privacy Policy" href="#">Privacy policy</a>
+                    <a rel="Terms of Use" href="#">Terms of Use</a>
             </footer>
-            </div>
+        </div>
     </div>
-    <script type="text/javascript" src="Assets/javascrpt/main.js"></script>
+    <script type="text/javascript" src="Assets/javascrpt/login.js"></script>
 </body>
+
 </html>
