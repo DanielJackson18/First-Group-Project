@@ -67,67 +67,7 @@ $("#submitAssignmentLog").on("click", function() {
 
 
 
-// $("#submitAssignmentLog").on("click", function() {
-    
-//   event.preventDefault();
 
-//   // Code in the logic for storing and retrieving the most recent train information
-//   var train = $("#trainname-input").val().trim();
-//   var destination = $("#destination-input").val().trim();
-//   var frequency = $("#frequency-input").val().trim();
-//   var firstTime = $("#firsttime-input").val().trim();
-  
-//   var trainInfo = { 
-//     formtrain: train,
-//     formdestination: destination,
-//     formfrequency: frequency,
-//     formfirsttime: firstTime,
-//     dateAdded: firebase.database.ServerValue.TIMESTAMP
-//   }; 
-//   database.ref().push(trainInfo);
-
-//   console.log(trainInfo.formtrain);
-//   console.log(trainInfo.formdestination);
-//   console.log(trainInfo.formfrequency);
-//   console.log(trainInfo.formfirsttime);
-//   console.log(trainInfo.dateAdded);
-
-//   $("#trainname-input").val("");
-//   $("#destination-input").val("");
-//   $("#frequency-input").val("");
-//   $("#firsttime-input").val("");
-
-// });
-
-
-// })$("#googlemapIcon").click(function(){
-
-// database.ref().push([
-//   {
-//     assignmentID: 1,
-//     taskId: 1,
-//     developerId: 1,
-//     priority: 1,
-//     taskName: "build something",
-//     description: "description"
-//   },
-//   {
-//     assignmentID: 2,
-//     taskId: 2,
-//     developerId: 2,
-//     priority: 2,
-//     taskName: "build something 2",
-//     description: "description 2"
-//   },
-//   {
-//     assignmentID: 3,
-//     taskId: 3,
-//     developerId: 3,
-//     priority: 3,
-//     taskName: "build something 3",
-//     description: "description 3"
-//   }
-// ]);
 
 $("#googlemapIcon").click(function() {
   alert("The paragraph was clicked.");
@@ -150,181 +90,143 @@ function initMap() {
 
 
 
-  //Map API//
-  //map div located contact us page 7//
-
-  window.onload = function() {
-    L.mapquest.key = 'v8hfuoU1S9cFOY1kHHpWH5dAHy6mjWJm';
-
-    var map = L.mapquest.map('map', {
-      center: [37.7749, -122.4194],
-      layers: L.mapquest.tileLayer('map'),
-      zoom: 13,
-      zoomControl: false
-    });
-
-    L.control.zoom({
-      position: 'topright'
-    }).addTo(map);
-
-    L.mapquest.directionsControl({
-      routeSummary: {
-        enabled: false
-      },
-      narrativeControl: {
-        enabled: true,
-        compactResults: false
-      }
-    }).addTo(map);
-
-  }
   
-  
-  
-//User Name/Password Authentication//
-// User name/password located home *page 1 //
+//Notebook function
+class Book {
+ constructor(title, author, isbn) {
+   this.title = title;
+   this.author = author;
+   this.isbn = isbn;
+ }
+// UI Class: Handle UI Tasks
+class UI {
+ static displayBooks() {
+   const books = Store.getBooks();
 
-var objPeople = [
-{
-  username: "sam",
-  password: "codify"
-},
-{
-  username: "daniel",
-  password: "acadamy"
-},
-{
-  username: "victoria",
-  password: "forever"
+   books.forEach((book) => UI.addBookToList(book));
+ }
+
+ static addBookToList(book) {
+   const list = document.querySelector('#book-list');
+
+   const row = document.createElement('tr');
+
+   row.innerHTML = `
+     <td>${book.title}</td>
+     <td>${book.author}</td>
+     <td>${book.isbn}</td>
+     <td><a href="#" class="btn btn-danger btn-sm delete">X</a></td>
+   `;
+
+   list.appendChild(row);
+ }
+
+ static deleteBook(el) {
+   if(el.classList.contains('delete')) {
+     el.parentElement.parentElement.remove();
+   }
+ }
+
+ static showAlert(message, className) {
+   const div = document.createElement('div');
+   div.className = `alert alert-${className}`;
+   div.appendChild(document.createTextNode(message));
+   const container = document.querySelector('.container');
+   const form = document.querySelector('#book-form');
+   container.insertBefore(div, form);
+
+   // Vanish in 3 seconds
+   setTimeout(() => document.querySelector('.alert').remove(), 3000);
+ }
+
+ static clearFields() {
+   document.querySelector('#title').value = '';
+   document.querySelector('#author').value = '';
+   document.querySelector('#isbn').value = '';
+ }
 }
-] 
+// Store Class: Handles Storage
+class Store {
+ static getBooks() {
+   let books;
+   if(localStorage.getItem('books') === null) {
+     books = [];
+   } else {
+     books = JSON.parse(localStorage.getItem('books'));
+   }
 
-function getInfo(){
-  var username = document.getElementById("username").value
-  var password = document.getElementById("password").value
-  
+   return books;
+ }
 
-for(i = 0; i < objPeople.length; i++) {
-  if(username == objPeople[i].username && password == objPeople[i].
-    password) {
-    console.log(username + " logged in!!!")
-    return
-  }
+ static addBook(book) {
+   const books = Store.getBooks();
+   books.push(book);
+   localStorage.setItem('books', JSON.stringify(books));
+ }
 
+ static removeBook(isbn) {
+   const books = Store.getBooks();
+
+   books.forEach((book, index) => {
+     if(book.isbn === isbn) {
+       books.splice(index, 1);
+     }
+   });
+
+   localStorage.setItem('books', JSON.stringify(books));
+ }
 }
-console.log("incorrect username or password")
-}
 
-//Need Modale function declining incorrect password//
+// Event: Display Books
+document.addEventListener('DOMContentLoaded', UI.displayBooks);
 
+// Event: Add a Book
+document.querySelector('#book-form').addEventListener('submit', (e) => {
+ // Prevent actual submit
+ e.preventDefault();
 
+ // Get form values
+ const title = document.querySelector('#title').value;
+ const author = document.querySelector('#author').value;
+ const isbn = document.querySelector('#isbn').value;
 
+ // Validate
+ if(title === '' || author === '' || isbn === '') {
+   UI.showAlert('Please fill in all fields', 'danger');
+ } else {
+   // Instatiate book
+   const book = new Book(title, author, isbn);
 
+   // Add Book to UI
+   UI.addBookToList(book);
 
-//Need function directing correct password to developer page//
+   // Add book to store
+   Store.addBook(book);
 
+   // Show success message
+   UI.showAlert('Note Added', 'success');
 
-
-// Task Manger function *located page 4 //
-
-$(document).ready(function(){
-  var newListItem;
-  var newList = true;
-  var theList = document.getElementById( 'theList');
-
-  $('#addToDo').on('click', function (e) {
-    e.preventDefault();
-    if (newList == true) {
-      var theValue = $("#toDoItem").val();
-      newListItem = '<li><span class= "handle"> :: </span> <input class="listItem" value=' +
-      theValue + '"><a class="removeListItem" style="display: none;"  href="#"> x </a> </li>"';
-                   newList = false;
-    }else {
-      var theValue = $("#toDoItem").val();
-      newListItem = $('#theList li:last').clone();
-      newListItem.find('input').attr('value', theValue);
-    } 
-
-    var theCount = $('#theList li').lenght + 1;
-    if (theCount > 1) {
-      $('#doClearAll').css('display', 'block');
-    }
-
-    $('#theList').append(newListItem);
-
-    
-    $('#toDoItem').val('');
-    $('#toDoItem').focus();
-    $('sortable').sortable('destroy');
-    $('sortable').sortable({
-      handle: '.handle'
-    });
-
-    localStorage.setItem('todoListPlus',theList.innerHTML);
-
-  });
-  $('input[type="text"]').on('keydown',function(e) {
-    var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
-    if(key == 13) {
-      e.preventDefault();
-      var inputs = $(this).closest('form').find(':input:visible');
-      inputs.eq( inputs.index(this)+ 1).focus();
-    }
-  });
-  $('theList').on('change','.listItem',function(e){
-    currentValue = $(this).val();
-    $(this).attr('value', currentValue);
-    localStorage.setItem('todoListPlus',theList.innerHTML);
-  });
-
-  $('.sortable').sortable().bind('sortupdate',function(){
-    localStorage.setItem('todoListPlus',theList.innerHTML);
-  });
-  $('#theList').on('mouseover','li', function(){
-    var $thisA = $(this).find('a');
-    $thisA.css('display','block');
-  });
-  $('#theList').on('mouseout','li', function(){
-    var $thisA = $(this).find('a');
-    $thisA.css('display','none');
-
-});
-$('#theList').on('click','.removeListeItem',function(e){
-  e.preventDefault();
-  $(this).parent().remove();
-  localStorage.setItem('todoListPlus',theList.innerHTML);
+   // Clear fields
+   UI.clearFields();
+ }
 });
 
-$('#doClearAll').on('click','#ClearAll', function(e){
-  e.preventDefault();
-  $('#theList').children().remove();
-  newList = true;
-  $('toDoItem').val('');
-  $('#doClearAll').css('display','none');
-  $('#toDoItem').focus();
-  localStorage.setItem('todoListPlus',theList.innerHTML);
+// Event: Remove a Book
+document.querySelector('#book-list').addEventListener('click', (e) => {
+ // Remove book from UI
+ UI.deleteBook(e.target);
+
+ // Remove book from store
+ Store.removeBook(e.target.parentElement.previousElementSibling.textContent);
+
+ // Show success message
+ UI.showAlert('Note Removed', 'success');
 });
-loadToDo();
-
-function loadToDo(){
-  if(localStorage.getItem('todoListPlus')){
-    theList.innerHTML = localStorage.getItem('todoListPlus');
-    $('sortable').sortable('destroy');
-    $('sortable').sortable({
-      handle: '.handle'
-  });
-  var theCount = $('#theList li').lenght + 1;
-    if (theCount > 1) {
-      $('#doClearAll').css('display', 'block');
-    }
-  }
-}
 
 
 
 
-  
-  
+
 
 
 

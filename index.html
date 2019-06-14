@@ -17,12 +17,13 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <!--Bootstrap link-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!--Main Title font-->
     <link href='http://fonts.googleapis.com/css?family=Just+Another+Hand' rel='stylesheet' type='text/css'>
     <!--Subtitle font-->
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <!--MapQuest API-->
 
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
@@ -34,11 +35,11 @@
 
 </head>
 
-<body> 
-
-
+<body>
    
-<div class="container-fluid" id="header">
+
+
+    <div class="container-fluid" id="header">
         <div class="row">
 
             <div class="col-4">
@@ -51,10 +52,11 @@
                 <div id="navDiv">
                     <nav>
                         <a href="index.html">Home</a>
+                        <a href="notepad.html">Note Pad</a>
                         <a href="aboutus.html">About us</a>
                         <a href="assignmentLog.html">Assignment Log</a>
-                        <a href="developerlog.html">Developer Log</a>
-                        <a href="assignmentreport.html">Assignment Report</a>
+                        <a href="developerlog.html">My Contacts</a>
+                        <a href="assignmentreport.html">Bookmark</a>
                         <a href="generalreport.html">General Reports</a>
                         <a href="contactus.html">Contact Us</a>
                     </nav>
@@ -64,6 +66,10 @@
         </div>
     </div>
 
+
+
+    <!--Jumbotron-->
+    <div class="jumbocontainer">
 
     <div class="container-fluid" id="mainContainer">
         <div class="row">
@@ -79,10 +85,34 @@
 
        <!--Jumbotron-->
 <div class="jumbocontainer">
+
         <h1 class="display-4">Próodos</h1>
         <p class="lead">Assignment Tracking System</p>
         <p>Let us help you stay organized!</p>
-       
+
+
+
+
+
+
+        <div id="transparentbackground">
+            <div class="container-fluid" id="mainContainer">
+                <div class="row">
+                    <div class="col-6">
+                    </div>
+                    <div class="col-6" id="main">
+
+                        <form role="form">
+                            <label for="username">Username</label><br>
+                            <input type="text" id="userName" name="firstname"><br>
+
+                            <label for="password">Password</label><br>
+                            <input type="text" id="password" name="password"><br><br>
+
+                            <input type="submit" id="submit" value="Submit">
+                        </form>
+                    </div>
+                </div>
 
 
  
@@ -126,14 +156,14 @@
                 </label> -->
 
 
+
             </div>
         </div>
 
     </div>
     </div>
-</div>
 
-          
+
 
     <div class="container-fluid" id="footer">
         <div class="row">
@@ -145,7 +175,21 @@
             </footer>
         </div>
     </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="Assets/javascrpt/main.js"></script>
+
     <script type="text/javascript" src="Assets/javascrpt/login.js"></script>
+
 </body>
 
 </html>
