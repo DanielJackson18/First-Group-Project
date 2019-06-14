@@ -1,4 +1,96 @@
 
+// $(document).on('click', "#googlemapIcon", function(initMap){
+// var config = {
+//   apiKey: "AIzaSyCxC0EKmN7JN1t0osgs-C2Q2sdWhnZI83M",
+//   databaseURL: "https://assignmenttracker-test.firebaseio.com/"
+// };
+
+// Your web app's Firebase configuration
+var firebaseConfig = {
+  apiKey: "AIzaSyCxC0EKmN7JN1t0osgs-C2Q2sdWhnZI83M",
+  authDomain: "assignmenttracker-test.firebaseapp.com",
+  databaseURL: "https://assignmenttracker-test.firebaseio.com",
+  projectId: "assignmenttracker-test",
+  storageBucket: "assignmenttracker-test.appspot.com",
+  messagingSenderId: "626442309702",
+  appId: "1:626442309702:web:e2fe8f2e7084aa91"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+var database = firebase.database();
+
+console.log(database);
+
+database.ref().on(
+  "value",
+  function(snapshot) {
+    console.log("values", snapshot.val());
+  },
+  function(errorObject) {
+    console.log("The read failed: " + errorObject.code);
+  }
+);
+
+
+$("#submitAssignmentLog").on("click", function() {
+  var assignmentId = $('#assignmentId_input').val.trim();
+  var taskId = $('#taskId_input').val.trim();
+  var developerId = $('#developerId_input').val.trim();
+  var priority = $('#priority_input').val.trim();
+  var taskName = $('#taskName_input').val.trim();
+  var description = $('#description_input').val.trim();
+
+  var assignmentLogInfo = {
+    formAssignmentId : assignmentId,
+    formTaskId : taskId,
+    formDeveloperId : developerId,
+    formPriority : priority,
+    formTaskName : taskName,
+    formDescription :description
+  };
+  database.ref().push(assignmentLogInfo);
+  console.log(assignmentLogInfo.formAssignmentId);
+  console.log(assignmentLogInfo.formDescription);
+  console.log(assignmentLogInfo.formPriority);
+  console.log(assignmentLogInfo.formTaskId);
+  console.log(assignmentLogInfo.formTaskName);
+
+   $('#assignmentId_input').val("");
+   $('#taskId_input').val("");
+   $('#developerId_input').val("");
+   $('#priority_input').val("");
+   $('#taskName_input').val("");
+   $('#description_input').val("");
+});
+
+
+
+
+
+
+$("#googlemapIcon").click(function() {
+  alert("The paragraph was clicked.");
+});
+
+$("#googlemapIcon").on("click", function() {
+  $("#map").show();
+});
+
+var map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
+    center: { lat: -34.397, lng: 150.644 },
+    zoom: 8
+  });
+}
+
+
+  
+
+
+
+  
 //Notebook function
 class Book {
  constructor(title, author, isbn) {
@@ -6,8 +98,6 @@ class Book {
    this.author = author;
    this.isbn = isbn;
  }
-}
-
 // UI Class: Handle UI Tasks
 class UI {
  static displayBooks() {
@@ -132,6 +222,7 @@ document.querySelector('#book-list').addEventListener('click', (e) => {
  // Show success message
  UI.showAlert('Note Removed', 'success');
 });
+
 
 
 

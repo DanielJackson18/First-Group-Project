@@ -6,6 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Assignment Tracking System</title>
+
+
+    <!-- Firebase Reference -->
+	<script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <!--Bootstrap link-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -15,8 +25,11 @@
     <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
     <!--MapQuest API-->
 
+
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+
 
     <link rel="stylesheet" type="text/css" href="Assets/css/stylesheet.css">
 
@@ -45,7 +58,7 @@
                         <a href="developerlog.html">My Contacts</a>
                         <a href="assignmentreport.html">Bookmark</a>
                         <a href="generalreport.html">General Reports</a>
-                        <a href="contact.html">Contact Us</a>
+                        <a href="contactus.html">Contact Us</a>
                     </nav>
                 </div>
             </div>
@@ -54,11 +67,29 @@
     </div>
 
 
+
     <!--Jumbotron-->
     <div class="jumbocontainer">
+
+    <div class="container-fluid" id="mainContainer">
+        <div class="row">
+            <div class="col-6">
+            </div>
+
+            <div class="col-6" id="main">
+                <div id="loginDiv">
+                <form role="form">
+                    <label for="username">User Name</label><br>
+                    <input type="text" id="userName" name="firstname" placeholder="email"><br>
+
+
+       <!--Jumbotron-->
+<div class="jumbocontainer">
+
         <h1 class="display-4">Próodos</h1>
         <p class="lead">Assignment Tracking System</p>
         <p>Let us help you stay organized!</p>
+
 
 
 
@@ -83,8 +114,53 @@
                     </div>
                 </div>
 
+
+ 
+     
+<div id="transparentbackground">
+    <div class="container-fluid" id="mainContainer">
+        <div class="row">
+            <div class="col-6">
+            </div>    
+            <div class="col-6" id="main"> 
+                
+                <form role="form">
+                    <label for="username">Username</label><br>
+                    <input type="text" id="userName" name="firstname"><br>
+
+
+                    <label for="password">Password</label><br>
+                    <input type="text" id="password" name="password" placeholder="password"><br><br>
+
+                    <button id="submit" onclick="login()">Login</button>
+                </form>
+                </div>
+
+                <div id="userDiv"> 
+                    <button>LogOut</button>
+                </div>
+
+                <!-- <label> Enter your favorite movies:<br />
+                    <input type="text" name="movies" list="movies" />
+                    <datalist id="movies">
+
+                        <label> or select one from the list:
+                            <select name="movies">
+                                <option value="S">
+                                <option value="The Godfather">
+                                <option value="Goodfellas">
+                            </select>
+                        </label> -->
+<!-- 
+                    </datalist>
+                </label> -->
+
+
+
             </div>
         </div>
+
+    </div>
     </div>
 
 
@@ -100,6 +176,7 @@
         </div>
     </div>
 
+
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -110,6 +187,9 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="Assets/javascrpt/main.js"></script>
+
+    <script type="text/javascript" src="Assets/javascrpt/login.js"></script>
+
 </body>
 
 </html>
