@@ -17,12 +17,18 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
+<!--bootswatch-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" integrity="sha384-i1LQnF23gykqWXg6jxC2ZbCbUMxyw5gLZY6UiUS98LYV5unm8GWmfkIS6jqJfb4E" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.3.1/flatly/bootstrap.min.css" rel="stylesheet" integrity="sha384-T5jhQKMh96HMkXwqVMSjF3CmLcL1nT9//tCqu9By5XSdj7CwR0r+F3LTzUdfkkQf" crossorigin="anonymous">
+
 </head>
 
 <!----------------------  Nav Bar  -------------------->
 
+
+
 <body>
-        <div class="generalReportBg">
+        
 
     <div class="container-fluid" id="header">
         <div class="row">
@@ -56,19 +62,47 @@
 
 
 
-    <div class="generalReport">
-    <table class="table table-sm">
-            
-              <tr style="color: white">
-                <th scope="col" style="background-color: rgba(0, 0, 0, 0.884)" >No.</th>
-                <th scope="col" style="background-color: rgba(0, 0, 0, 0.658)">Task</th>
-                <th scope="col" style="background-color: rgba(0, 0, 0, 0.884)">Priority Name</th>
-                <th scope="col" style="background-color: rgba(0, 0, 0, 0.658)">Logged by</th>
-                <th scope="col" style="background-color: rgba(0, 0, 0, 0.884)">Request Date</th>
-                <th scope="col" style="background-color: rgba(0, 0, 0, 0.658)">Status</th>
-              </tr>
-        </table>
-      </div><!--bottom table END-->
+   
+
+<title>My note pad </title>
+</head>
+<body>
+        <div class="notepadBg">
+            <div class="notepadContent">
+       <div class="container mt-0">
+               <h1 class="display-4 text-center">
+                 <i class="fas fa-book-open text-primary"></i> My <span class="text-primary"> Note </span> Pad </h1>
+                 <form id="book-form">
+                   <div class="form-group">
+                     <label for="title">Project Name</label>
+                     <input type="text" id="title" class="form-control">
+                   </div>
+                   <div class="form-group">
+                     <label for="author">Assigned to:</label>
+                     <input type="text" id="author" class="form-control">
+                   </div>
+                   <div class="form-group">
+                     <label for="isbn">Task</label>
+                     <input type="text" id="isbn" class="form-control">
+                   </div>
+                   <input type="submit" value="Add" class="btn btn-primary btn-block">
+                 </form>
+                 <table class="table table-striped mt-5">
+                   <thead>
+                     <tr>
+                       <th>Project Name</th>
+                       <th>Assigned to:</th>
+                       <th>Task</th>
+                       <th></th>
+                     </tr>
+                   </thead>
+                   <tbody id="book-list"></tbody>
+                 </table>
+             </div>
+             </div><!--notepad content END-->
+   <script type="text/javascript" src="Assets/javascrpt/main.js"></script>
+</body>
+</html><!--bottom table END-->
 
 <!----------------------------  Footer  ----------------------------------> 
 
@@ -88,3 +122,27 @@
     <script type="text/javascript" src="Assets/javascrpt/main.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

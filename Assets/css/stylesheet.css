@@ -20,7 +20,7 @@ body{
   height: 1100px;
   margin: 0;
   text-align: center;
-  padding-top: 1%;
+  padding-top: 2%;
   padding-right: 25px;
 
 }
@@ -32,6 +32,7 @@ body{
  border-style: solid;
  border-width: 2px;
  border-color: #000000;
+
  
  
 }
@@ -40,22 +41,49 @@ body{
 #logoDiv{
  float:left;
  width:25%;
+ margin-right: 50px;
 }
-/*NavBar*/
-#navDiv{
- float: right;;
- width:75%;
- padding-bottom: 20px;
- padding-right: 20px;
+
+
+ /*NAV DIV*/
+ #navBar{
+ float: right;
+ width:100%;
+ padding-bottom: 0px;
+ padding-right: 30px;
  background-color: rgba(0, 0, 0, 0.123);
  margin: auto;
- margin-top: 25px;
+ margin-top: 45px;
+ margin-right: 250px;
+ text-align: center;
  align-content: center;
  line-height: 40px;
  border-style: solid;
  border-width: 1px;
  border-color: #000000;
+ }
+
+  nav {
+  float: right;
+  width: 110%;
+  clear: both;
+  margin: 0;
+  margin-top: 100px;
+  margin-right: 150px;
+  padding-top: 30px;
+  padding-left: 25px;
+  align-content: center;
+  line-height: 90px;
+  color: #ccc;
+  font-size: 18px;
+  margin-top: 100px;
+  margin-bottom: -25px;
+  position: relative;
  
+}
+
+#navDiv {
+  margin-bottom: 90px;
 }
 
 /*logo on header*/
@@ -77,11 +105,7 @@ body{
 
 }
 
-/* Main Container */
-#mainContainer{
- margin:20px;
- 
-}
+
 
 /*login username*/
 #main{
@@ -103,7 +127,7 @@ body{
   position: relative;
   background-color: rgba(0, 0, 0, 0.637);
   border-style: solid;
-  border-width: 5px;
+  border-width: 3px;
   border-color: #cf0004;
   border-radius: 10px;
   height: 350px;
@@ -191,7 +215,7 @@ input[type=submit]:hover {
  box-sizing: border-box;
  align-content: center;
  text-align: center;
- padding-left: 45%;
+ padding-left: 42%;
  border-style: solid;
  border-width: 2px;
  border-color: #000000;
@@ -240,7 +264,7 @@ height: auto;
   margin: auto;
   color: rgb(218, 9, 9);
   font: 400 100px/1.0 'Just Another Hand', Helvetica, sans-serif;
-  font-size: 200px;
+  font-size: 180px;
   color: #cf0004;
   text-shadow: 0px 3px 0px #5e5e5e, 0px 5px 0px #4d4d4d, 0px 7px 0px #3c3c3c, 0px 9px 0px #2b2b2b, 3px 8px 15px rgba(0,0,0,0.1), 3px 8px 5px rgba(0,0,0,0.3);
   border-color: #cf0004 4px solid;
@@ -263,48 +287,262 @@ height: auto;
 
 
 
- /*================Developer Log css below=========================*/
-.wrapper { 
-background-color: white;
-background-image: url("https://images.pexels.com/photos/1181622/pexels-photo-1181622.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=750&w=1260");
-background-repeat: no-repeat;
-background-size: 120%;
-height: 800px;
-align-content: center;
-text-align: center;
-margin: auto;
-width: 100%;
-padding-top: 25px;
-}
+ /*================Developer Log css below=========AKA MY CONTACTS=============================================================================*/
+  .contactContent {
+    width: 500px;
+    height: 5000px;
+    margin: auto;
+    padding: 0;
+  }
 
-/*transparent BG for main content area of Developer log*/
-#userInfoBox {
+
+
+
+
+
+
+
+
+/*GENERAL REPORT***************************************************************************************************************/
+
+
+
+  .generalReport {
   
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.555);
-  border-style: solid;
-  border-width: 3px;
-  border-color: #cf0004;
-  border-radius: 10px;
-  margin: auto;
-  padding-bottom: 15px;
-  padding-left: 20%;
-  padding-right: 20%;
-  width: 850px;
-  text-align: center;
-  align-content: center;
-  color: #ffffff;
-}
+    background-color: #cf0004;
+    text-align: center;
+    align-content: center;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #cf0004;
+    border-radius: 0px;
+    margin-top: 40px;
+    margin-right: 20px;
+    margin-left: 160px;
+    margin-bottom: 20px;
+    line-height: 70px;
+    
+    
 
-/*user info inside Developer log*/
-.userInfo {
-  width: 700px;
-  color: white;
-  margin: auto;
-}
+  }
 
+  .generalReport {
+
+    border-collapse: collapse;
+    width: 80%;
+     
+    }
+
+    .generalReportBg {
+      background: url("https://images.pexels.com/photos/1181345/pexels-photo-1181345.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 850px;
+      width: 100%;
+      margin: auto;
+      padding: 0;
+      align-content: center;
+      text-align: center;
+      
+    }
+
+
+/*notepad***************************************************************************************************************/
+
+    .notepadContent {
+
+    }
 
  
+     
+    
+
+    .notepadBg {
+      /*background: url("https://images.pexels.com/photos/934062/pexels-photo-934062.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=750&w=1260");*/
+      background-repeat: no-repeat;
+      background-size: 100%;
+      height: 2000px;
+      width: 100%;
+      margin: auto;
+      margin-top: 50px;
+      padding: 0;
+      align-content: center;
+      text-align: center;
+      
+    }
+
+
+
+
+    /************************************************************ABOUT US************************************************************************/
+
+
+ #groupImage {
+   margin-top: 140px;
+   margin-left: 90px;
+   width: 600px;
+   float: left;
+   
+
+  
+ }
+
+ #aboutUs {
+  float: left;
+  margin: auto;
+  margin-left: 180px;
+  width: 600px;
+  
+  
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ /*xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxMEDIA QUERIES Xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+ /* 
+  ##Device = Desktops
+  ##Screen = 1401px to higher resolution desktops
+*/
+
+@media (max-width: 1401px) {
+  #navDiv {
+    width: 100%;
+    background: #cf0004;
+    clear: both;
+    margin: 0;
+    margin-top: 25px;
+    align-content: center;
+    
+    
+  }
+
+  #logoDiv {
+    width: 10%;
+    clear: both;
+    margin: 0;
+   
+  }
+
+  #logo {
+    width:100%;
+    margin-top: 15px;
+    clear: both;
+    columns: 4;
+  }
+  
+  #header .row {
+    background-color: #cf0004;
+    margin: 0 auto;
+    padding: 15px;
+    height: 80px;
+    top: 0;
+    z-index: 1;
+    
+    width: 100%;
+    margin: 0;
+    
+  }
+  
+  
+
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+ 
+  
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+
+
+  
+  
+  
+  
+
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 400px to 919px
+*/
+
+@media (min-width: 716px) and (max-width: 919px) and (orientation: landscape) {
+    
+      
+      
+}
+  
+#logoDiv {
+  width: 100%;
+  clear: both;
+  margin: 0;
+  columns: 1;
+ 
+}
+
+#header .row  {
+  background-color: #cf0004;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 0;
+  height: 80px;
+  top: 0;
+  z-index: 1;
+  
+  width: 100%;
+  clear: both;
+  margin: 0;
+  columns: 6;
+  
+  
+  
+}
+
+
+
+
+
+  
+
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+
+
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  
+  //CSS
+  
+}
 
 
 
