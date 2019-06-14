@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-------  //  Assignment Report Page 5  //  ------------>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
     <title>Assignment Tracking System</title>
+    <!--Bootstrap link-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Main Title font-->
+    <link href='http://fonts.googleapis.com/css?family=Just+Another+Hand' rel='stylesheet' type='text/css'>
+    <!--Subtitle font-->
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
 
- <!---JQuery--> 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
-
-<!---Stylesheet CSS/Bootstrap-->
     <link rel="stylesheet" type="text/css" href="Assets/css/stylesheet.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 </head>
 
-<!--------------------  Nav Bar  ------------------------------------>
-<body>
+<body> 
 
-    <div class="container-fluid" id="header">
+
+   
+<div class="container-fluid" id="header">
         <div class="row">
 
             <div class="col-4">              
@@ -38,11 +38,11 @@
                     <nav>
                         <a href="index.html">Home</a>
                         <a href="aboutus.html">About us</a>
-                        <a href="assignmentlog.html">Assignment Log</a>
+                        <a href="assignmentLog.html">Assignment Log</a>
                         <a href="developerlog.html">Developer Log</a>
                         <a href="assignmentreport.html">Assignment Report</a>
                         <a href="generalreport.html">General Reports</a>
-                        <a href="contactuss.html">Contact Us</a>
+                        <a href="contact.html">Contact Us</a>
                     </nav>
                 </div>   
             </div>
@@ -50,30 +50,52 @@
         </div>
     </div>
 
-<!-------------------------  Main Container  ------------------------------->    
-    
+
+       <!--Jumbotron-->
+<div class="jumbocontainer">
+        <h1 class="display-4">Próodos</h1>
+        <p class="lead">Assignment Tracking System</p>
+        <p>Let us help you stay organized!</p>
+       
+
+
+ 
+     
+<div id="transparentbackground">
     <div class="container-fluid" id="mainContainer">
         <div class="row">
             <div class="col-6">
-           
-            </div> 
+            </div>    
+            <div class="col-6" id="main"> 
+                
+                <form role="form">
+                    <label for="username">Username</label><br>
+                    <input type="text" id="userName" name="firstname"><br>
+
+                    <label for="password">Password</label><br>
+                    <input type="text" id="password" name="password"><br><br>
+
+                    <input type="submit" id="submit" value="Submit">
+                </form> 
+                </div>
+            </div>
+            
         </div>
     </div>
+</div>
 
-<!--------------------------  Footer  ---------------------------------------->    
+          
 
     <div class="container-fluid" id="footer">
             <div class="row">
             <footer>
-                &copy;proodos Assignment Tracking Team
+                &copy;Próodos Assignment Tracking Team
                 <div class="content">
                 <a rel="Privacy Policy" href="#">Privacy policy</a>
                 <a rel="Terms of Use" href="#">Terms of Use</a>
             </footer>
             </div>
     </div>
-
-<!---Javascript-->    
     <script type="text/javascript" src="Assets/javascrpt/main.js"></script>
 </body>
 </html>

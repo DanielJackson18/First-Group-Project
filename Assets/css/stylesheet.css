@@ -1,76 +1,156 @@
-/* Body */
-body{ 
-    font: 'open sans',sans-serief;
-    font-size: 16px;
-    font-weight: 300;
-    background-color:#eee9d9;
-    color:#000000;
-    margin: 0;
-    padding: 0;
+
+
+/*/* Body */
+body{
+ font: 'open sans',sans-serief;
+ font-size: 16px;
+ font-weight: 300;
+ background-color:#ffffff;
+ color:#000000;
+ margin: 0;
+ padding: 0;
+
 }
 
+/*Jumbotron*/
+.jumbocontainer {
+  display: block;
+  background-image: url("https://images.pexels.com/photos/1893485/pexels-photo-1893485.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  align-content: center;
+  height: 1100px;
+  margin: 0;
+  text-align: center;
+  padding-top: 1%;
+  padding-right: 25px;
+
+}
 /* Header */
 #header{
-    background-color: #cf0004;
-    color:#ffffff;
-    height: 130px;
+ background-color: #cf0004;
+ color:#ffffff;
+ height: 130px;
+ border-style: solid;
+ border-width: 2px;
+ border-color: #000000;
+ 
+ 
 }
+
+/*logo on header*/
 #logoDiv{
-    float:left;
-    width:25%;
+ float:left;
+ width:25%;
 }
-
+/*NavBar*/
 #navDiv{
-    float: right;;
-    width:75%;
-    padding: 20px;
+ float: right;;
+ width:75%;
+ padding-bottom: 20px;
+ padding-right: 20px;
+ background-color: rgba(0, 0, 0, 0.123);
+ margin: auto;
+ margin-top: 25px;
+ align-content: center;
+ line-height: 40px;
+ border-style: solid;
+ border-width: 1px;
+ border-color: #000000;
+ 
 }
 
+/*logo on header*/
 #logo{
-    width:200px;
-    height:100px;
-    margin:15px;
+ width:200px;
+ height:100px;
+ margin:15px;
+ border-style: solid;
+ border-width: 1px;
+ border-color: #000000;
+}
+
+/*maincontent*/
+#maincontent {
+ float: center;
+ margin: auto;
+ width: 990px;
+ background:none;
+
 }
 
 /* Main Container */
 #mainContainer{
-    margin:20px;
+ margin:20px;
+ 
 }
-#main{
-    margin-top:20px;
-    margin-bottom: 20px;
-    font-size: 1em;
 
+/*login username*/
+#main{
+ margin-top:20px;
+ margin-bottom: 20px;
+ margin-right: 9%;
+ margin-left: 25%;
+ font-size: 1em;
+ width: 80%;
+ border-radius: 10px;
 }
-  /* Nav */
+
+
+
+
+ /*Transparent BG for login*/
+#transparentbackground {
+  align-content: center;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.637);
+  border-style: solid;
+  border-width: 5px;
+  border-color: #cf0004;
+  border-radius: 10px;
+  height: 350px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1%;
+  padding-left: 0%;
+  padding-right: 3%;
+  padding-bottom: 10%;
+  color: #fff;
+  width: 55%;
+  align-content: center;
+  position: relative;
+  
+}
+
+
+/* Nav */
 nav {
-	float: right;
-	margin-top: 25px;
-  }
+float: right;
+margin-top: 25px;
+}
 nav a {
-    font-size: 1em;
-    font-weight: 2000;
-	margin-left: 15px;
-	padding-left: 15px;
-	color: #ffffff;
-	text-decoration: none;
-    line-height: 18px;
-    width: 180px;
-    display: table-cell;
-    margin-right: 15px;
-    text-align: center;
-    vertical-align: middle;
-    line-height: 14px;
-  }
+font-size: 1em;
+font-weight: 2000;
+margin-left: 15px;
+padding-left: 15px;
+color: #ffffff;
+text-decoration: none;
+line-height: 18px;
+width: 180px;
+display: table-cell;
+margin-right: 15px;
+text-align: center;
+vertical-align: middle;
+line-height: 14px;
+}
 nav a:visited{
-    color:#fff;
+ color:#fff;
 }
 nav a:hover{
-    background-color:#6d0911;
+ background-color:#6d0911;
 }
 
 
 /* Form */
+
   input[type=text], select, textarea {
     width: 75%;
     padding: 5px;
@@ -98,42 +178,86 @@ nav a:hover{
     background-color:#6d0911;;
   }
 
-/* Footer */
-#footer{
-    clear:both;
-    background-color: #cf0004;
-    color:#ffffff;
-    height: 100px;
-    text-align: right;
-    padding-left:80%;
-    padding-top:30px;
+input[type=text], select, textarea {
+ width: 115%;
+ padding: 12px;
+ border: 1px solid #ccc;
+ border-radius: 4px;
+ resize: vertical;
 }
 
-/*About us Image */
+label {
+ padding: 12px 12px 12px 0;
+ display: inline-block;
+}
+
+input[type=submit] {
+ background-color:  #cf0004;
+ color: white;
+ padding: 12px 20px;
+ border: none;
+ border-radius: 4px;
+ cursor: pointer;
+ float: left;
+}
+
+input[type=submit]:hover {
+ background-color:#6d0911;;
+}
+
+
+/* Footer */
+#footer  {
+ clear:both;
+ background-color: #cf0004;
+ color:#ffffff;
+ height: 100px;
+ padding-top: 30px;
+ margin: auto;
+ position: relative;
+ bottom:0;
+ width:100%;
+ box-sizing: border-box;
+ align-content: center;
+ text-align: center;
+ padding-left: 45%;
+ border-style: solid;
+ border-width: 2px;
+ border-color: #000000;
+ position:fixed;
+    bottom:0
+
+
+
+}
+
+/*About us Image*/
 .image{
-    width: 400px;
-	height: auto;
-	margin-top: 10px;
-	margin-right: 25px;
-	float: left;
+ width: 400px;
+height: auto;
+margin-top: 10px;
+margin-right: 25px;
+float: left;
 }
 /* Contact us  */
 #googlemapIcon{
-    width: 200px;
-	height: auto;
+ width: 200px;
+height: auto;
 }
 #adressHolder{
-    margin-top: 30px
+ margin-top: 30px
 }
 #googleIcon{
-    width:50%;
-    float:left;
+ width:50%;
+ float:left;
 }
 #googleIcon{
-    width:50%;
-    float:left;
+ width:50%;
+ float:left;
 }
+
 #adressDescription{
+
     width:50%;
     float:left;
     margin-top: 40px;
@@ -166,3 +290,95 @@ border-collapse: collapse;
   background-color: #cc6633;;
   color: white;
 }
+
+ width:50%;
+ float:left;
+ margin-top: 40px;
+}
+
+/*Main Heading*/
+.display-4 {
+  width: 45%;
+  align-content: center;
+  margin: auto;
+  color: rgb(218, 9, 9);
+  font: 400 100px/1.0 'Just Another Hand', Helvetica, sans-serif;
+  font-size: 200px;
+  color: #cf0004;
+  text-shadow: 0px 3px 0px #5e5e5e, 0px 5px 0px #4d4d4d, 0px 7px 0px #3c3c3c, 0px 9px 0px #2b2b2b, 3px 8px 15px rgba(0,0,0,0.1), 3px 8px 5px rgba(0,0,0,0.3);
+  border-color: #cf0004 4px solid;
+  }
+
+  /*Sub Heading*/
+  .lead {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 40px;
+    background-color: rgba(255, 255, 255, 0.473);
+    width: 35%;
+    margin: auto;
+    margin-top: -2%;
+    align-content: center;
+    border-radius: 10px;
+  }
+
+
+
+
+
+
+ /*================Developer Log css below=========================*/
+.wrapper { 
+background-color: white;
+background-image: url("https://images.pexels.com/photos/1181622/pexels-photo-1181622.jpeg?auto=format%2Ccompress&cs=tinysrgb&dpr=2&h=750&w=1260");
+background-repeat: no-repeat;
+background-size: 120%;
+height: 800px;
+align-content: center;
+text-align: center;
+margin: auto;
+width: 100%;
+padding-top: 25px;
+}
+
+/*transparent BG for main content area of Developer log*/
+#userInfoBox {
+  
+  position: relative;
+  background-color: rgba(0, 0, 0, 0.555);
+  border-style: solid;
+  border-width: 3px;
+  border-color: #cf0004;
+  border-radius: 10px;
+  margin: auto;
+  padding-bottom: 15px;
+  padding-left: 20%;
+  padding-right: 20%;
+  width: 850px;
+  text-align: center;
+  align-content: center;
+  color: #ffffff;
+}
+
+/*user info inside Developer log*/
+.userInfo {
+  width: 700px;
+  color: white;
+  margin: auto;
+}
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
