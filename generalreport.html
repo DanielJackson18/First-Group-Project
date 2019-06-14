@@ -1,18 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
 <!-----------  //  General Report Page 6  //  ---------->
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>Assignment Tracking System</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+    <title>Assignment Tracking System</title>
 <!---Jquery--->  
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"
         integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
+
+    <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+
+
 <!---Style Sheet CSS/Bootstrap-->        
+
     <link rel="stylesheet" type="text/css" href="Assets/css/stylesheet.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" 
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -26,9 +41,9 @@
     <div class="container-fluid" id="header">
         <div class="row">
 
-            <div class="col-4">              
+            <div class="col-4">
                 <div id="logoDiv">
-                    <img id="logo" alt="logo" src="Assets/image/logo.jpg" >
+                    <img id="logo" alt="logo" src="Assets/image/logo.jpg">
                 </div>
             </div>
 
@@ -43,21 +58,32 @@
                         <a href="generalreport.html">General Reports</a>
                         <a href="contactus.html">Contact Us</a>
                     </nav>
-                </div>   
+                </div>
             </div>
-                    
+
         </div>
     </div>
+
+
     
 
 <!--------------------------  Main Container  -----------------------> 
 
 
+
     <div class="container-fluid" id="mainContainer">
         <div class="row">
-            <div class="col-6">
-           
-            </div> 
+
+            <table id="generalReport">
+                <tr>
+                    <th>No</th>
+                    <th>Task Name</th>
+                    <th>Priority Name</th>
+                    <th>Loged By</th>
+                    <th>Request Date</th>
+                    <th>Status</th>
+                </tr>
+            </table>
         </div>
     </div>
 
@@ -66,17 +92,21 @@
 
 
     <div class="container-fluid" id="footer">
-            <div class="row">
+        <div class="row">
             <footer>
                 &copy;proodos Assignment Tracking Team
                 <div class="content">
-                <a rel="Privacy Policy" href="#">Privacy policy</a>
-                <a rel="Terms of Use" href="#">Terms of Use</a>
+                    <a rel="Privacy Policy" href="#">Privacy policy</a>
+                    <a rel="Terms of Use" href="#">Terms of Use</a>
             </footer>
-            </div>
+        </div>
     </div>
+
+
+    <script type="text/javascript" src="Assets/javascrpt/generalreport.js"></script>
 
 <!---Javascript--->    
     <script type="text/javascript" src="Assets/javascrpt/main.js"></script>
 </body>
+
 </html>
