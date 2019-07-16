@@ -1,3 +1,5 @@
+
+
 /*/* Body */
 body{
  font: 'open sans',sans-serief;
@@ -649,13 +651,6 @@ height: auto;
   ##Device = Most of the Smartphones Mobiles (Portrait)
   ##Screen = B/w 320px to 479px
 */
-
-@media (min-width: 320px) and (max-width: 480px) {
-  
-  //CSS
-  
-}
-
 
 
 
